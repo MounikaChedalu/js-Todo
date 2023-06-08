@@ -1,0 +1,99 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  height:100%;
+  background: lightgray;
+}
+h1{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  background-color: brown;
+}
+.todo{
+  width:40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  background: white;
+  min-height: 100px;
+  border-radius: 10px;;
+}
+#to{
+  position: relative;
+  padding: 30px 20px;
+}
+#to input{
+  width:75%;
+  height:45px;
+  font-size: 15px;
+  padding:12px;
+  border:1px solid black;
+  border-radius: 3px;
+  position: relative;
+ }
+#to input:focus{
+  outline: none;
+  border-color: brown;
+}
+#to button{
+  position: relative;
+  float:right;
+  height:45px;
+  width:20%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  background-color: lightgreen;
+  border:none;
+  color:white;
+  cursor: pointer;
+  }
+  #to button:hover{
+    background-color: lightseagreen;
+    color:white;
+  }
+  #do{
+    background-color: white;
+    margin-top: 10px;
+    padding: 30px 20px;
+    width:100%;
+    position: relative;
+    border-radius: 10px;
+}
+  .dos{
+    background-color: lightblue;
+    height:50px;
+    margin-bottom: 8px;
+    padding:5px 10px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border:1px solid lightgrey;
+    cursor: pointer;
+}
+.dos span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.dos button{
+  background-color: red;
+  color:white;
+  font-size:x-large;
+  font-weight: bold;
+  text-align: center;
+  height:100%;
+  width:40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
