@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link href = './style.css' rel="stylesheet" />
+</head>
+<body>
+    <div class="todo">
+    <h1>TODO List</h1>
+    <div id="to">
+      <input type="text" id ="inputfield" placeholder="Enter Text.......">
+      <button id="push">Add</button>
+    </div>
+    <div id="do"></div>
+  </div>
+  <script>
+    document.querySelector('#push').onclick=function(){
+      if(document.querySelector('#to input').value.length==0){
+        alert("please enter Text");
+      }
+      else{
+        document.querySelector('#do').innerHTML += `
+        <div class="dos">
+        <span id="name">
+        ${document.querySelector('#to input').value}
+        </span>
+        <button class="cancel"><i class="\u00D7">&times;</i>
+          </button>
+          </div>
+        `;
+          var text=document.querySelectorAll(".cancel");
+          for(var i=0;i<text.length;i++){
+            text[i].onclick = function(){
+              this.parentNode.remove();
+              
+            }
+          }
+          document.querySelector('#to input').value = "";
+      }
+  }
+  </script> 
+    
+</body>
+</html>
